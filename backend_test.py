@@ -11,7 +11,7 @@ import uuid
 from datetime import datetime, timedelta
 
 # Configuration
-BASE_URL = "https://learnswap-1.preview.emergentagent.com/api"
+BASE_URL = "http://localhost:3000/api"
 HEADERS = {"Content-Type": "application/json"}
 
 class MinuteSavoirAPITester:
