@@ -96,9 +96,10 @@ class MinuteSavoirAPITester:
         
         # Generate unique test data
         unique_id = str(uuid.uuid4())[:8]
+        self.test_user_email = f"john.doe.{unique_id}@example.com"
         test_data = {
             "name": f"John Doe {unique_id}",
-            "email": f"john.doe.{unique_id}@example.com",
+            "email": self.test_user_email,
             "password": "securepassword123",
             "bio": "Experienced software developer passionate about teaching",
             "teachingSkills": ["JavaScript", "Python", "React"],
