@@ -20,6 +20,7 @@ class MinuteSavoirAPITester:
         self.headers = HEADERS.copy()
         self.auth_token = None
         self.test_user_id = None
+        self.test_user_email = None
         self.test_session_id = None
         self.test_results = []
         
