@@ -146,14 +146,13 @@ class MinuteSavoirAPITester:
         """Test 3: User Login - POST /api/auth/login"""
         print("\n=== Testing User Login ===")
         
-        if not self.test_user_id:
+        if not self.test_user_id or not self.test_user_email:
             self.log_test("User Login", False, "No test user available - signup must succeed first")
             return False
             
         # Use the same credentials from signup
-        unique_id = str(uuid.uuid4())[:8]
         login_data = {
-            "email": f"john.doe.{unique_id}@example.com",
+            "email": self.test_user_email,
             "password": "securepassword123"
         }
         
