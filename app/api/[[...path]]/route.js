@@ -374,10 +374,6 @@ async function handleRequest(request) {
     const url = new URL(request.url)
     const pathSegments = url.pathname.split('/').filter(segment => segment && segment !== 'api')
     
-    console.log('Request method:', request.method)
-    console.log('URL pathname:', url.pathname)
-    console.log('Path segments:', pathSegments)
-    
     if (pathSegments.length === 0) {
       return NextResponse.json({ 
         message: 'Minute Savoir API',
@@ -392,8 +388,6 @@ async function handleRequest(request) {
     }
 
     const [resource, ...remainingSegments] = pathSegments
-    console.log('Resource:', resource)
-    console.log('Remaining segments:', remainingSegments)
 
     switch (resource) {
       case 'auth':
@@ -405,7 +399,6 @@ async function handleRequest(request) {
       case 'skills':
         return await handleSkills(request, remainingSegments)
       default:
-        console.log('No matching resource found for:', resource)
         return NextResponse.json({ error: 'Route not found' }, { status: 404 })
     }
   } catch (error) {
