@@ -131,6 +131,9 @@ async function handleAuth(request, path) {
 async function handleUsers(request, pathSegments) {
   const db = await connectToDatabase()
   
+  console.log('handleUsers - method:', request.method)
+  console.log('handleUsers - pathSegments:', pathSegments)
+  
   if (request.method === 'GET') {
     try {
       // Get all users (excluding passwords)
