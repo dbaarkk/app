@@ -148,9 +148,9 @@ async function handleUsers(request, pathSegments) {
     }
   }
 
-  if (request.method === 'PUT' && pathSegments[1]) {
+  if (request.method === 'PUT' && pathSegments[0]) {
     try {
-      const userId = pathSegments[1]
+      const userId = pathSegments[0]
       const updates = await request.json()
       
       // Verify token
