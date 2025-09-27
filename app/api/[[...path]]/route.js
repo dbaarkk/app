@@ -251,9 +251,9 @@ async function handleSessions(request, pathSegments) {
     }
   }
 
-  if (request.method === 'PUT' && pathSegments[1]) {
+  if (request.method === 'PUT' && pathSegments[0]) {
     try {
-      const sessionId = pathSegments[1]
+      const sessionId = pathSegments[0]
       const updates = await request.json()
       
       // Verify token
