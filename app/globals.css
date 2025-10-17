@@ -31,6 +31,9 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    /* Pointer reactive lighting defaults */
+    --mx: 50vw;
+    --my: 50vh;
   }
 }
 
@@ -100,6 +103,19 @@
     background: conic-gradient(from 0deg, #00ffff, #9333ea, #00ffff);
     border-radius: 50%;
     animation: portal-spin 2s linear infinite;
+  }
+
+  /* Hover-responsive white lighting overlay */
+  .hover-lighting {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(360px 360px at var(--mx) var(--my), rgba(255,255,255,0.12), transparent 60%),
+      radial-gradient(900px 900px at calc(var(--mx) + 120px) calc(var(--my) + 100px), rgba(255,255,255,0.06), transparent 70%);
+    mix-blend-mode: screen;
+    transition: opacity 0.2s ease;
   }
 }
 

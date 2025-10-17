@@ -4,16 +4,15 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Troq - Learn Any Skill in 1 Hour',
-  description: 'Trade skills, learn something new in just 1 hour. Connect with teachers and learners in our skill-sharing community.',
+  title: 'weby ai — Build with AI chat',
+  description:
+    'Create websites, apps, and Telegram bots by just chatting. Minimal, fast, professional. Inter font, black background, white text.',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-black text-white`}>
-        {children}
-      </body>
+      <body className={`${inter.className} bg-black text-white`}>{children}</body>
     </html>
   )
 }
